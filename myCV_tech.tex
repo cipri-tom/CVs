@@ -9,10 +9,9 @@
 \usepackage{hyperref}
 \usepackage{url}
 
-%set L and R for columns in tabular
-\usepackage{array}
-\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}} % raggedLeft pushes everything to right
-\newcolumntype{R}{p{0.8\textwidth}}
+% new package for easier tables
+\usepackage{tabu}
+\usepackage{longtable}
 
 \begin{document}
 \maketitle
@@ -26,44 +25,51 @@ Email: ciprian.tomoiaga@gmail.com; Mobile: +44 (0) 774 6373 029\vspace{-2ex}
 \end{center}
 
 \section*{Education\vspace{-2ex}}
-\begin{tabular}{LR}
+% \begin {tabu} to <desired_width> {X[width, align, type]}
+\begin {tabu} to\linewidth {X[0.14, r, p]X[0.8, j, p]}
 \bf 2012--2016&{\bf The University of Manchester}\\
 &BSc (Hons) Computer Science with Industrial Experience\\
 &Expected result: 1\textsuperscript{st} Class (First semester average: 82\%)\\
-&Gaining experience with new programming languages (Java, ARM, python, shell scripting), web development and team working.\vspace{5pt}\\
+&Gained extensive programming experience with web development technologies and with several programming languages, including Java, Python, ARM assembly and shell scripting.\vspace{5pt}\\
 \bf 2008--2012&\bf"Liviu Rebreanu" National College, Bistrita, Romania\\ 
 &Baccalaureate exam (9.41/10 average):\\
 &Mathematics (9.5/10), Computing (9.3/10), Literature (9.45/10)\vspace{5pt}\\
 &Graduation average: 9.91/10\vspace{5pt}\\
 &Developed excellent practical programming knowledge in various computer languages (C\#, C, C++, PHP) and computer science fields (algorithms, relational databases, web development), as well as good coding practices.\vspace{-2ex}\\
-
-\end{tabular}
+\savetabu {tom}   % use the same tabu multiple times
+\end{tabu}
 
 \section*{Work experience\vspace{-2ex}}
-\begin{tabular}{LR}
-\bf 2011&\bf Application developer in C\#\vspace{5pt}\\
-& \hspace{1em}$\circ$\hspace{1.5em}Designed and developed an application used by a genetics PhD for selecting, merging and analysing relevant fields from a huge amount of data. It reduced user's working time from a few weeks to a few days.\vspace{5pt}\\
+\begin {longtabu} to\linewidth {X[0.14, r, p]X[0.8, j, p]}
+\bf 2013&\bf First year team project\\
+&Designed and built from scratch a movie review website, along with a team of 6. Used only open source technologies and no helping frameworks.\vspace{5pt}\\
+&Proved very good team working abilities and improved on my web development skills.\vspace{5pt}\\
+&\bf Basic chat client\\
+& Designed a chat protocol and implemented the related chat client to learn better Python and GUI programming.\vspace{5pt}\\
+\bf 2011-2012&\bf Application developer in C\#\vspace{5pt}\\
+& \hspace{1em}$\circ$\hspace{1.5em}Designed and developed an application used by a genetics PhD for selecting, merging and analysing relevant features from a huge amount of data. It reduced user's working time from a few weeks to a few days.\vspace{5pt}\\
 & \hspace{1em}$\circ$\hspace{1.5em}Designed and developed an application for a driving school which generated tests for the users and kept track of their progress.\vspace{5pt}\\
 & \hspace{1em}$\circ$\hspace{1.5em}Designed and developed an online shop for my high school final year project with different functionalities for the buyer (categorising, sorting and searching) and for the administrator (adding, removing and editing items and offering promotions).\vspace{5pt}\\
-&Achieved solid practical skills using C\#, .Net, ASP and MySQL in software development.\vspace{5pt}\\
-%
-%\end{tabular}
-%
-%\section*{}
-%\begin{tabular}{LR}
+&Achieved solid practical skills using C\#, .Net, ASP and MySQL in software development and gained familiarity with the Visual Studio IDE.\vspace{5pt}\\
+
 \bf 2011&\bf Balkan Olympiad in Informatics\\
 &Volunteered in organising the Balkan Olympiad in Informatics.\vspace{5pt}\\
 &Demonstrated very good communication and organisation abilities, as the chief of the Media department, where I coordinated a team of 5 in writing newsletters and magazines, taking interviews and facilitating translations of tasks. Also, proved excellent organisational and leadership skills, being coordinator of more than 20 guides, each of them being responsible of a country's team.\vspace{5pt}\\
+\\ % some blank rows to force a new page
+\\
+\\
+\\
+\\
 \bf 2009--2011&\textbf{Summer and part time job} as both bartender and supervisor at a local pub. Apart from dealing promptly, efficiently and in a friendly manner with customers' requests, my duties included managing events, staff, expenses and promotions, which produced a revenue increase of approximately 20\%. \vspace{5pt}\\
 &Developed excellent leadership and supervisory abilities, as well as marketing skills and commercial awareness.\vspace{5pt}\\
 \bf 2010&\textbf{Volunteering} in environmental campaigns and organisations like "Let's do it, Romania!" and Greenpeace.\vspace{5pt}\\
 &Gained team work experience and environmental awareness.\vspace{5pt}\\
+\end{longtabu}
 
-\end{tabular}
 
-\section*{Achievements and Awards\vspace{-2ex}}
+\section*{Achievements and Awards}
 
-\begin{tabular}{LR}
+\begin {tabu} {\usetabu{tom}} % use a previously saved tabu
 \bf 2013& \bf University of Manchester GameJam Hackathon\\
 &My team won the prize for "Most original game idea"\vspace{5pt}\\
 \bf 2009--2012&\bf National Physics Contests\\
@@ -76,23 +82,23 @@ Email: ciprian.tomoiaga@gmail.com; Mobile: +44 (0) 774 6373 029\vspace{-2ex}
 \bf 2009&{\bf National Programming Olympiad} -- Ranked 3\textsuperscript{rd} at the county round\vspace{5pt}\\
 
 &Demonstrated self education and research skills, as these achievements were gained mostly through self study in my own spare time, as well as good time management.\vspace{-2ex}\\ 
-\end{tabular}
+\end{tabu}
 
 
 \section*{Additional skills and qualifications\vspace{-2ex}}
-\begin{tabular}{LR}
+\begin {tabu} to\linewidth {X[0.14, r, p]X[0.8, j, p]}
 \bf IELTS&Scored 8/9 at the IELTS Academic Module\vspace{5pt}\\
 \bf IT&Applications: Microsoft Office, \LaTeX, Adobe Photoshop\\
 &Programming: C, C++, C\#, PHP, HTML, CSS, ASP .NET, MySQL\vspace{5pt}\\
 \bf Driving&Full, clean driving licence\\
-\end{tabular}
+\end{tabu}
 
 \section*{Interests and Activities\vspace{-2ex}}
-\begin{tabular}{LR}
+\begin {tabu} to\linewidth {X[0.14, r, p]X[0.8, j, p]}
 \bf Competing&Taking part in programming contests (Facebook HackerCup, Google Codejam, TopCoder SRMs) and hackathons (Microsoft WOWZAPP, UoM Gamejam)
  to gain new skills, develop on existing ones and keep my motivation high.\\
 \bf Sports&Member of dancing societies, and enjoy participating in meetings and dance workshops, to relax and develop creativity. Also, regularly swim and work out to keep myself fit and healthy.\\
-\end{tabular}
+\end{tabu}
 \thispagestyle{empty}
 
 \end{document}
