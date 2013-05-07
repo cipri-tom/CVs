@@ -1,0 +1,30 @@
+1.  Responsive Interface Design
+
+It is important that when building a website, you must ensure that all page elements are responding rapidly to mouse/keyboard input and behaving as likely. Some examples are side drop-down boxes, popup windows and fly-out menus. These features can be easily created and animated by JavaScript libraries such as MooTools & JQuery;
+
+The majority of current browsers not only supports this code but also kindly degrades when the scripts are not available. Finally you need to create the user friendly designs to interact anywhere in the website. For example you take form inputs and data checking into thought. You can automate every checking process to save time on the user’s end.
+2. Dynamic Typography
+
+In Website Design Tradition Fonts comprises a big part. Font serves an endless function in website standards; there are many options for advanced Dynamic typography.
+
+Examples: Type Kit, Google Web Fonts etc… Like this many alternate systems are used for structuring dynamic fonts. We may expect in this 2013 to grasp a flow of improvements and design talents in this part.
+3. Exaggerated Hyperlinks
+
+Anchor Links are in the top 5 while considering elements of web design. There are lots of amazing ideas for designing a hyperlink, both in hover and standard effects. CSS3 added extra great ideas into this mix including rounded corners, custom font families, text shadows. Simple Bits is one of my favorite examples which use a small dynamic animation on its every blog entry permalinks.
+4. Modal Popup Boxes
+
+The main purpose of modal window is to present box content such as login or user registration on same page without loading onto a new one.
+
+Although modal boxes are shine and smooth, they also need different coding to do their work properly.
+5. HTML5 & CSS3
+
+Attractive Features of HTML5 & CSS3 are,
+
+    works on every platform,
+    compatible with older browsers, and
+    Handles errors elegantly.
+    Common Tasks are simplified
+
+Using this you can make authoritative, easy-to-retain, potential web pages.
+
+In addition to that, you may freely work on the semantics of your markups.
