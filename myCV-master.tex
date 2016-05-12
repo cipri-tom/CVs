@@ -5,17 +5,31 @@
 \usepackage[margin=1.6cm]{geometry}
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage{array}
+\usepackage{xcolor}
 \usepackage{tabu}            % new package for easier tables
 \usepackage[overload]{ragged2e} % better RaggedLeft; install package 'ms'
 \usepackage{titlesec}        % to remove space after section
+\usepackage{multirow}        % to use title on 2 rows, aligned with email & tel
+
+\hypersetup{
+  pdftitle      = {Curriculum Vitae - Ciprian I. Tomoiaga}, % ă not accepted
+  pdfauthor     = {Ciprian Tomoiaga},
+  pdfsubject    = {Experience and achievements},
+  pdfkeywords   = {CV, resume},
+  pdfpagemode   = UseOutlines,
+  pdfstartview  = Fit,
+  pdfpagelayout = OneColumn,        % document in 1 column continuous scrolling
+  colorlinks    = true,             % Colours links instead of ugly boxes
+  urlcolor      = {blue!80!black},  % Colour for external hyperlinks
+  linkcolor     = {blue!80!black},  % Colour of internal links
+  breaklinks    = true,             % Break long links into lines
+  % ocgcolorlinks = true              % when printing, links are black (default)
+}
 
 % \titlespacing*{\command}{left}{before}{after}[right]
-\titlespacing*{\section}{0pt}{-0.5em}{-1em}
-
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\setlength{\parskip}{0.15in} % less space after paragraph
+\titlespacing*{\section}{0pt}{0pt}{-0.5em}
+\setlength{\parskip}{0.5em}  % less space after paragraph
+\setlength{\parindent}{0pt}  % avoid auto indentation
 \pagestyle{empty}            % Produces empty heads and feet - no page numbers
 
 % make "C++" look pretty when used in text by touching up the plus signs
@@ -27,133 +41,114 @@
 \begin{document}
 
 % Title
-  \begin{tabu} to\linewidth {>{\bfseries}X[0.15,r,p]X[0.4,l,m]X[0.45,r,m]}
+  \noindent
+  \begin{center} %heading: Title, Address and contact
+    {\LARGE Ciprian I.~Tomoiagă}
+    \vspace*{-0.5em}
 
-  \end{tabu}
-
-
-% \begin{center} %heading: Title, Address and contact
-%   \textbf{\Large Ciprian I. Tomoiagă}
-
-%   % 1, Brownslow walk, Manchester, UK, M13 9UQ % what's the point in having the address on the CV?
-
-%   \vspace*{-2ex}
-%     Email: ciprian.tomoiaga@gmail.com; Mobile: +44 (0) 7746 373 029
-%   \vspace*{-2ex}
-% \end{center}
+    \href{mailto:ciprian.tomoiaga@gmail.com}{\textsf{ciprian.tomoiaga@gmail.com}}
+    | \textsf{+44 (0) 7746 373 029}
+  \vspace*{-2ex}
+\end{center}
 
 \section*{Education}
-
   % \begin {tabu} to <desired_width> {X[width, align, type]}
-  \begin{tabu} to \textwidth {>{\bfseries}R{2.65cm} X[j, p]}
+  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}| X[j, p]}
     \savetabu{timeline}
+    2012--2016
+      & \textbf{The University of Manchester} -- BSc (Hons) Computer Science\\
+      & Top 5\% -- 81\% avg.~-- 1\textsuperscript{st} Class degree focused on Computer Vision and AI\\
+      % & some other row just for testing vert align \\
+      % & yet another one\\
+  \end{tabu}
 
-   2012--2016 & \textbf{The University of Manchester} -- BSc (Hons) Computer Science\\
-  & Ranked in top 5\% of the class \\
-  & Expected result: 1\textsuperscript{st} Class degree focused on artificial intelligence and machine learning\\
-  & 1\textsuperscript{st} \& 2\textsuperscript{nd} year average grade: 81\%\vspace{5pt}\\
-
-   2008--2012 & \bf ``Liviu Rebreanu'' National College, Bistrița, Romania\\
-  & Baccalaureate exam: Mathematics: 9.5/10, Computing: 9.3/10, Literature: 9.45/10\\
-  & Graduation average: 9.91/10\\
-  \savetabu {education}   % use the same tabu multiple times
+  \begin{tabu}{\usetabu{timeline}}
+    2008--2012 & \textbf{``Liviu Rebreanu'' National College, Bistrița, Romania} -- 9.91/10 avg.\\
   \end{tabu}
 
 \section*{Relevant work experience}
 
-  \tabulinesep=2.7pt
   % \begin{tabu} to \linewidth {>{\bfseries}X[0.15, r, p]X[0.8, j, p]}
   \begin{tabu}{\usetabu{timeline}}
-    2015--present & \textbf{Autonomous indoor mapping with drones} -- final year project \\
-      & -- use computer vision to construct 3D maps of unknown environments \\
-      & -- use artificial intelligence to make the process autonomous \\
-      & -- deploy on cheap commercial drone for proof of concept \\
-      [-1.75ex]
-    \\
+  2015--present & \textbf{Autonomous indoor mapping with drones} -- final year project \\
+    & -- use computer vision to construct 3D maps of unknown environments \\
+    & -- use artificial intelligence to make the process autonomous \\
+    & -- deploy on cheap commercial drone for proof of concept \\
+    [-1.75ex]\\
+  & \textbf{Fluid simulation} -- Advanced computer graphics coursework \\
+    & -- learnt about fluid dynamics and used openGL to simulate smoke on the GPU \\
+    [-1.75ex]\\
+  & \textbf{Detection of sickle-cell anaemia} -- via image processing techniques
+  \end{tabu}
 
-    & \textbf{Fluid simulation} -- Advanced computer graphics coursework \\
-      & -- learnt about fluid dynamics and used openGL to simulate smoke on the GPU \\
-      [-1.75ex]
-    \\
+  \begin{tabu}{\usetabu{timeline}}
+  2014--2015 & \textbf{CERN Technical student} -- Methodical Accelerator Design\\
+    & -- developed new \textit{Generalised Truncated Power Series Algebra} for optimising and \newline extending the transport maps used by particle accelerator simulation codes\\
+    % & -- derived a complete set of new formula and data structure to address the problem of memory consumption required for efficient computation of high order \textit{TPSA}\\
+    & -- implemented as a library which outperforms ($\times$6) existing high-performance ones\\
+    % & -- our advances have been published in a paper for \textit{IPAC'15} conference\\
+  \end{tabu}
 
-    2014--2015 & \textbf{CERN Technical student} -- Methodical Accelerator Design\\
+  \begin{tabu}{\usetabu{timeline}}
+  Spring 2014 & \textbf{Machine learning projects} -- Handwriting recognition, spam filter \\
+    & -- learnt different classification techniques to recognise handwriting and spam emails\\
+  \end{tabu}
 
-      & -- developed new \textit{Generalised Truncated Power Series Algebra} for optimising and \newline extending the transport maps used by particle accelerator simulation codes\\
-
-      & -- derived a complete set of new formula and data structure to address the problem of memory consumption required for efficient computation of high order \textit{TPSA}\\
-
-      & -- built a package with extended flexibility for computation of maps in beam dynamics which outperforms with a factor of 4--10 existing high-performance libraries\\
-
-      & -- our advances have been published in a paper for \textit{IPAC'15} conference\\
-      [-1.75ex]
-    \\
-
-    Spring 2014 & \textbf{Machine learning projects} -- Handwriting recognition, spam filter \\
-      & -- learnt different classification techniques to recognise handwriting and spam emails\\
-      [-1.75ex]
-    \\
-
-    Summer 2013 & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
+  \begin{tabu}{\usetabu{timeline}}
+  Summer 2013 & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
       & -- devised new methods for visualisation of brain data in a neuroscience research project\\
       & -- solved the challenge of implementing them for the web, using WebGL and JavaScript\\
       & -- learned basic computer graphics programming with the OpenGL-ES API\\
   \end{tabu}
 
 \section*{Other work experience}
-
   \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-
   2013--2014 & \textbf{1UP - Manchester Ultimate Programming Society} -- Vice-president\\
     & -- organised events for students who want to expand their knowledge; these included programming workshops, hackathons and talks on various topics\\
     & -- organised biggest programming workshop in the school (100\texttt{+} attendees)\\
     & -- facilitated students' contact with industry and created work opportunities\\
-    [-1.75ex]
-    \\
+  \end{tabu}
 
-  Summer 2011 & \textbf{Balkan Olympiad in Informatics} -- chief of Media department -- volunteer\\
-    & -- coordinated team of 5 in taking interviews and writing publications\\
-    & -- coordinated team of 20 guides, each of them being responsible of a country's team\\
-    [-1.75ex]
-    \\
+  \begin{tabu}{\usetabu{timeline}}
+  Summer 2011 & \textbf{Balkan Olympiad in Informatics} -- chief of Media department\\
+    & -- coordinated team of 5 journalists and team of 20 guides\\
+  \end{tabu}
 
-  2010--present & \textbf{Volunteering}\\
-    & -- STEM ambassador -- introducing pupils to STEM subjects\\
-    & -- member of Computer Science Student Committee -- making students' voice heard\\
-    & -- PASS Leader (Peer Assisted Study Sessions) -- mentoring younger students \\
-    & -- for environmental causes like ``Let's do it, Romania!'' and Greenpeace
+  \begin{tabu}{\usetabu{timeline}}
+  2010--present & \textbf{Volunteering} -- STEM ambassador -- PASS Leader -- environmental causes\\
+    & -- all-round science geek, worked with pupils and mentored younger students
   \end{tabu}
 
 
 \section*{Achievements and Awards}
-
   \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-    2015 & \textbf{International Particle Accelerator Conference '15} -- co-authored paper and poster on \textit{Generalised Truncated Power Series Algebra} \\
+    2015 & \textbf{International Particle Accelerator Conference '15}\\
+         & -- co-authored paper and poster on \textit{Generalised Truncated Power Series Algebra} \\
 
     2013 & \textbf{University of Manchester GameJam Hackathon} -- ``Most original game idea'' \\
-    2012 & \textbf{IELTS} -- Scored 8/9 at the IELTS Academic Exam\\
-    [-1.75ex]
-    \\
-    2009--2012 & Constantly ranked in top 3 at county and inter-county rounds of national contests in Physics, Mathematics and Computing.\\
-               & Demonstrated self education and research skills as well as good time management, as these achievements were gained mostly through self study in my own spare time.\\
+    % 2012 & \textbf{IELTS} -- Scored 8/9 at the IELTS Academic Exam\\
+    2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing\\
+               % & Demonstrated self education and research skills as well as good time management, as these achievements were gained mostly through self study in my own spare time.\\
   \end{tabu}
 
-
 \section*{Interests and Activities}
-
   \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
     Technology
-      & Passionate about computer vision and machine learning -- reading blogs on the topic and playing with tools on minimal examples.\\
-      & Continuously up to date with latest advancements in technology of all kinds\\
+      & Computer Vision | Machine learning | UNIX | Autonomous drones \\
+  \end{tabu}
 
+  \begin{tabu}{\usetabu{timeline}}
     Competing
-      & Taking part in programming contests (Facebook HackerCup, Google Codejam, \mbox{TopCoder} SRMs) and hackathons (Microsoft WOWZAPP, UoM Gamejam) to gain new skills, develop on existing ones and keep my motivation high.\\
+      & \textbf{Programming contests:} Facebook HackerCup | Google Codejam | TopCoder SRM\\
+      & \textbf{Hackathons:} StudentHack | Microsoft WOWZAPP | UoM Gamejam \\
+  \end{tabu}
 
+  \begin{tabu}{\usetabu{timeline}}
     Sports
       & Outdoor person and social dancer -- in my free time I'm either hiking some mountain or learning a new style on the dance floor.\\
   \end{tabu}
 
-  \vspace{2cm}
-
+\vspace{1em}
 References available on request.
 
 \end{document}
