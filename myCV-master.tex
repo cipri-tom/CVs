@@ -12,11 +12,8 @@
 \usepackage[explicit]{titlesec}        % to remove space after section
 \usepackage{multirow}        % to use title on 2 rows, aligned with email & tel
 
-% \usepackage{sectsty}         % for styling section
-\usepackage[normalem]{ulem}  % with double underline
-
-
 \definecolor{accent_color}{HTML}{04567F} % nice blue
+% \definecolor{accent_color}{HTML}{E6541A} % awesome orange
 % \definecolor{accent_color}{HTML}{900020} % burgundy
 % \definecolor{accent_color}{cmyk}{0,1,1,0} % EPFL
 % \definecolor{accent_color}{HTML}{8C121E} % some dark red
@@ -50,16 +47,6 @@
 \setlength{\parskip}{0.5em}  % less space after paragraph
 \setlength{\parindent}{0pt}  % avoid auto indentation
 \pagestyle{empty}            % Produces empty heads and feet - no page numbers
-
-% put underline below section http://tex.stackexchange.com/q/167857/
-% \allsectionsfont{\underline}
-% \makeatletter
-% \sectionfont{\ulemheading{\uuline}}
-% \let\oldsection\section
-% \def\section{\@ifstar\s@section\@section}
-% \newcommand{\@section}[2][\relax]{\oldsection{\llap{\rlap{\hspace{\textwidth}\llap{#1}}\protect\phantom{\thesection\quad}}#2}}
-% \newcommand{\s@section}[2][\relax]{\oldsection*{\llap{\rlap{\hspace{\textwidth}\llap{#1}}}#2}}
-% \makeatother
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -137,7 +124,7 @@
 
   \begin{tabu}{\usetabu{timeline}}
   Summer 2013 & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
-      & -- devised new methods for visualisation of brain data in a neuroscience research project\\
+      & -- devised visualisation of brain data in a neuroscience research project\\
       & -- solved the challenge of implementing them for the web, using \textit{WebGL} and \textit{JavaScript}
       % & -- learned basic computer graphics programming with the OpenGL-ES API\\
   \end{tabu}
@@ -149,7 +136,7 @@
   \end{tabu}
 
   \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-  2013--2014 & \textbf{ManUP Society} -- VP -- organised hackathons and tech events\\
+  2013--2014 & \textbf{ManUP Society} -- VP -- organised hackathons and tech events for students\\
     % & -- organised events for students who want to expand their knowledge; these included programming workshops, hackathons and talks on various topics\\
     % & -- organised biggest programming workshop in the school (100\texttt{+} attendees)\\
     % & -- facilitated students' contact with industry and created work opportunities\\
