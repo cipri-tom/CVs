@@ -1,4 +1,5 @@
 \documentclass[11pt,a4paper]{article}
+
 \usepackage{lmodern}        % use modern latin fonts
 \usepackage[T1]{fontenc}    % use 8 bit output font encoding with more glyphs
 \usepackage[utf8]{inputenc} % so you can type ă
@@ -8,8 +9,17 @@
 \usepackage{xcolor}
 \usepackage{tabu}            % new package for easier tables
 \usepackage[overload]{ragged2e} % better RaggedLeft; install package 'ms'
-\usepackage{titlesec}        % to remove space after section
+\usepackage[explicit]{titlesec}        % to remove space after section
 \usepackage{multirow}        % to use title on 2 rows, aligned with email & tel
+
+% \usepackage{sectsty}         % for styling section
+\usepackage[normalem]{ulem}  % with double underline
+
+
+\definecolor{accent_color}{HTML}{04567F} % nice blue
+% \definecolor{accent_color}{HTML}{900020} % burgundy
+% \definecolor{accent_color}{cmyk}{0,1,1,0} % EPFL
+% \definecolor{accent_color}{HTML}{8C121E} % some dark red
 
 \hypersetup{
   pdftitle      = {Curriculum Vitae - Ciprian I. Tomoiaga}, % ă not accepted
@@ -20,17 +30,36 @@
   pdfstartview  = Fit,
   pdfpagelayout = OneColumn,        % document in 1 column continuous scrolling
   colorlinks    = true,             % Colours links instead of ugly boxes
-  urlcolor      = {blue!80!black},  % Colour for external hyperlinks
+  urlcolor      = {accent_color},  % Colour for external hyperlinks
   linkcolor     = {blue!80!black},  % Colour of internal links
   breaklinks    = true,             % Break long links into lines
   % ocgcolorlinks = true              % when printing, links are black (default)
 }
 
+
+\titleformat{\section}                             % what to format
+  {\normalfont\large\bfseries\color{accent_color}} % how to format the text
+  {\thesection}                                    % what label to use (number)
+  {1em}                                            % how much space after label
+  {#1}                                             % code before the text; #1 is the text
+  [{\titlerule[1pt]}]                            % code after the text
 % \titlespacing*{\command}{left}{before}{after}[right]
-\titlespacing*{\section}{0pt}{0pt}{-0.5em}
+\titlespacing*{\section}{0pt}{0pt}{-0.3em}
+
+
 \setlength{\parskip}{0.5em}  % less space after paragraph
 \setlength{\parindent}{0pt}  % avoid auto indentation
 \pagestyle{empty}            % Produces empty heads and feet - no page numbers
+
+% put underline below section http://tex.stackexchange.com/q/167857/
+% \allsectionsfont{\underline}
+% \makeatletter
+% \sectionfont{\ulemheading{\uuline}}
+% \let\oldsection\section
+% \def\section{\@ifstar\s@section\@section}
+% \newcommand{\@section}[2][\relax]{\oldsection{\llap{\rlap{\hspace{\textwidth}\llap{#1}}\protect\phantom{\thesection\quad}}#2}}
+% \newcommand{\s@section}[2][\relax]{\oldsection*{\llap{\rlap{\hspace{\textwidth}\llap{#1}}}#2}}
+% \makeatother
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -53,17 +82,17 @@
 
 \section*{Education}
   % \begin {tabu} to <desired_width> {X[width, align, type]}
-  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}| X[j, p]}
+  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
     \savetabu{timeline}
     2016--present
-      & \textbf{École Polytechnique Federale de Lausanne} -- MSc Computer Science\\
+      & \textbf{École polytechnique federale de Lausanne} -- MSc Computer Science\\
       & Focused on Data analysis, Machine learning \& AI -- 5.01 avg.\\
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
     2012--2016
       & \textbf{The University of Manchester} -- BSc (Hons) Computer Science\\
-      & Top 5\% -- 1\textsuperscript{st} Class degree focused on Computer Vision and AI -- 81\% avg.\\
+      & Top 5\% -- 1\textsuperscript{st} Class degree focused on Computer Vision and AI -- 81\% avg.
   \end{tabu}
 
   % \begin{tabu}{\usetabu{timeline}}
@@ -109,7 +138,7 @@
   \begin{tabu}{\usetabu{timeline}}
   Summer 2013 & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
       & -- devised new methods for visualisation of brain data in a neuroscience research project\\
-      & -- solved the challenge of implementing them for the web, using \textit{WebGL} and \textit{JavaScript}\\
+      & -- solved the challenge of implementing them for the web, using \textit{WebGL} and \textit{JavaScript}
       % & -- learned basic computer graphics programming with the OpenGL-ES API\\
   \end{tabu}
 
@@ -128,7 +157,7 @@
 
   \begin{tabu}{\usetabu{timeline}}
   Summer 2011 & \textbf{Balkan Olympiad in Informatics} -- chief of Media department\\
-    & -- coordinated team of 5 journalists and team of 20 guides\\
+    & -- coordinated team of 5 journalists and team of 20 guides
   \end{tabu}
 
 \section*{Achievements and Awards}
@@ -136,10 +165,9 @@
     2016 & \textbf{Computer Science Head of School Award}\\
     2015 & \textbf{International Particle Accelerator Conference '15}\\
          & -- co-authored paper and poster on \textit{Generalised Truncated Power Series Algebra} \\
-
     2013 & \textbf{University of Manchester GameJam Hackathon} -- ``Most original game idea'' \\
     % 2012 & \textbf{IELTS} -- Scored 8/9 at the IELTS Academic Exam\\
-    2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing\\
+    2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing
                % & Demonstrated self education and research skills as well as good time management, as these achievements were gained mostly through self study in my own spare time.\\
   \end{tabu}
 
@@ -152,7 +180,7 @@
 
   \begin{tabu}{\usetabu{timeline}}
     Sports
-      & Outdoor person and social dancer -- in my free time I'm either hiking some mountain or learning a new style on the dance floor.\\
+      & Outdoor person and social dancer -- in my free time I'm either hiking some mountain or learning a new style on the dance floor.
   \end{tabu}
 
 \vspace{1em}
