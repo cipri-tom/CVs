@@ -22,15 +22,15 @@
   pdftitle      = {Curriculum Vitae - Ciprian I. Tomoiaga}, % ă not accepted
   pdfauthor     = {Ciprian Tomoiaga},
   pdfsubject    = {Experience and achievements},
-  pdfkeywords   = {CV, resume},
+  pdfkeywords   = {CV, resume, data, analysis, computer vision},
   pdfpagemode   = UseOutlines,
   pdfstartview  = Fit,
   pdfpagelayout = OneColumn,        % document in 1 column continuous scrolling
   colorlinks    = true,             % Colours links instead of ugly boxes
-  urlcolor      = {accent_color},  % Colour for external hyperlinks
+  urlcolor      = {accent_color},   % Colour for external hyperlinks
   linkcolor     = {blue!80!black},  % Colour of internal links
   breaklinks    = true,             % Break long links into lines
-  % ocgcolorlinks = true              % when printing, links are black (default)
+  % ocgcolorlinks = true            % when printing, links are black (default)
 }
 
 
@@ -39,18 +39,14 @@
   {\thesection}                                    % what label to use (number)
   {1em}                                            % how much space after label
   {#1}                                             % code before the text; #1 is the text
-  [{\titlerule[1pt]}]                            % code after the text
+  [{\titlerule[1pt]}]                              % code after the text
 % \titlespacing*{\command}{left}{before}{after}[right]
-\titlespacing*{\section}{0pt}{0pt}{-0.3em}
+\titlespacing*{\section}{0pt}{0pt}{0.3em}
 
 
 \setlength{\parskip}{0.5em}  % less space after paragraph
 \setlength{\parindent}{0pt}  % avoid auto indentation
 \pagestyle{empty}            % Produces empty heads and feet - no page numbers
-
-% make "C++" look pretty when used in text by touching up the plus signs
-\newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
 %% ============================================================================
 
@@ -64,33 +60,48 @@
 
     \href{mailto:ciprian.tomoiaga@gmail.com}{\textsf{ciprian.tomoiaga@gmail.com}}
     | \textsf{+41 (0) 77 977 15 15}
-  \vspace*{-2ex}
-\end{center}
+    \vspace*{-2ex}
+  \end{center}
 
+\begin{minipage}[t]{0.48\textwidth}
 \section*{Education}
+  \textbf{EPF Lausanne} \hfill 2016-2018\par
+  MSc Computer Science -- 5.2 avg.\par
+  Data analysis, Machine learning \par
+  \vspace{0.35em}
+  \textbf{University of Manchester} \hfill 2012-2016\par
+  BSc Computer Science -- 81\% avg. \par
+  Computer Vision \& AI
+\end{minipage}
+\quad
+\begin{minipage}[t]{0.49\textwidth}
+  \section*{Personal}
+  % \tracingtabu=4
+  \tabulinesep=0pt
+  \begin{tabu} to 1.1\linewidth {@{}p{5cm} @{}X[-1,c] @{}>{\hspace{5pt}}X[l]}
+  \textbf{Interests:}  Computer vision &--& ConvNN, OpenCV\\
+    Text mining \& Data analysis       &--& TensorFlow, Spark\\
+    Data visualisation                 &--& JavaScript, WebGL
+  \end{tabu}
+  \vspace{0.35em}
+  \textbf{Work permit:} B type\par
+  \textbf{Languages:} English -- fluent \textbf{\&} French -- B2\par
+  \textbf{Availability:} March 2018
+\end{minipage}
+
+\vspace{0.35em}
+\section*{Relevant work experience}
   % \begin {tabu} to <desired_width> {X[width, align, type]}
   \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
     \savetabu{timeline}
-    2016--present
-      & \textbf{École polytechnique federale de Lausanne} -- MSc Computer Science\\
-      & Focused on Data analysis, Machine learning \& AI -- 5.01 avg.\\
+  2017--present & \textbf{AXA Tech Lab} -- Master project\\
+    & -- Deep learning for information extraction and handwriting recognition
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
-    2012--2016
-      & \textbf{The University of Manchester} -- BSc (Hons) Computer Science\\
-      & Top 5\% -- 1\textsuperscript{st} Class degree focused on Computer Vision and AI -- 81\% avg.
-  \end{tabu}
-
-  % \begin{tabu}{\usetabu{timeline}}
-  %   2008--2012 & \textbf{``Liviu Rebreanu'' National College, Bistrița, Romania} -- 9.91/10 avg.\\
-  % \end{tabu}
-
-\section*{Relevant work experience}
-
-  % \begin{tabu} to \linewidth {>{\bfseries}X[0.15, r, p]X[0.8, j, p]}
-  \begin{tabu}{\usetabu{timeline}}
-  2016--present & \textbf{Amazon opinion mining} -- Analysing Swiss products from 90\,Gb of reviews\\
+  2016--2017 & \textbf{Amazon opinion mining} -- Analysed Swiss products from 90\,GB of reviews\\
+    & -- Used \textit{Spark} and ML to uncover useful reviews\\
+    & -- Presented results in Applied ML Days conference 2017\\
     [-1.75ex]\\ % new paragraph
   & \textbf{Twitter sentiment analysis} -- Convolutional Neural Network with 86.5\%  accuracy  \\
     [-1.75ex]\\ % new paragraph
@@ -106,8 +117,6 @@
     & -- use computer vision \& AI to autonomously build 3D maps of unknown environments \\
     & -- deploy on cheap commercial drone for proof of concept \\
     [-1.75ex]\\ % new paragraph
-  & \textbf{Fluid dynamics} -- \textit{GPU}-based smoke simulation with \textit{OpenGL}\\
-    [-1.75ex]\\
   & \textbf{Detection of sickle-cell anaemia} -- via image processing techniques
   \end{tabu}
 
@@ -117,11 +126,6 @@
     % & -- derived a complete set of new formula and data structure to address the problem of memory consumption required for efficient computation of high order \textit{TPSA}\\
     & -- implemented as a library which outperforms ($\times$6) existing high-performance ones\\
     % & -- our advances have been published in a paper for \textit{IPAC'15} conference\\
-  \end{tabu}
-
-  \begin{tabu}{\usetabu{timeline}}
-  Spring 2014 & \textbf{Machine learning projects} -- Handwriting recognition, spam filter \\
-    & -- learnt different classification techniques to recognise handwriting and spam emails\\
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
@@ -138,7 +142,7 @@
   \end{tabu}
 
   \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-  2013--2014 & \textbf{ManUP Society} -- VP -- organised hackathons and tech events for students\\
+  2013--2014 & \textbf{Ultimate Programming Society} --VP-- organised hackathons and tech events\\
     % & -- organised events for students who want to expand their knowledge; these included programming workshops, hackathons and talks on various topics\\
     % & -- organised biggest programming workshop in the school (100\texttt{+} attendees)\\
     % & -- facilitated students' contact with industry and created work opportunities\\
@@ -159,23 +163,6 @@
     2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing
                % & Demonstrated self education and research skills as well as good time management, as these achievements were gained mostly through self study in my own spare time.\\
   \end{tabu}
-
-\section*{Interests and Skills}
-  \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-    Tech
-      & Deep learning, Data analysis, Text mining, Neural networks, Computer Vision\\
-      & Python, TensorFlow, Spark | C, OpenGL, OpenCV | JavaScript, WebGL | Bash
-  \end{tabu}
-
-  \begin{tabu}{\usetabu{timeline}}
-    Languages
-      & \textbf{English} -- fluent, C2 proficiency \\
-      & \textbf{French}  -- intermediate, B2 proficiency
-  \end{tabu}
-  % \begin{tabu}{\usetabu{timeline}}
-  %   Sports
-  %     & Outdoor person, enjoying good mountain views
-  % \end{tabu}
 
 % \vspace{1em}
 % References available on request.
