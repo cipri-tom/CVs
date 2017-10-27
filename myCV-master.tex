@@ -41,7 +41,7 @@
   {#1}                                             % code before the text; #1 is the text
   [{\titlerule[1pt]}]                              % code after the text
 % \titlespacing*{\command}{left}{before}{after}[right]
-\titlespacing*{\section}{0pt}{0pt}{0.3em}
+\titlespacing*{\section}{0pt}{0.5em}{0.3em}
 
 
 \setlength{\parskip}{0.5em}  % less space after paragraph
@@ -60,7 +60,6 @@
 
     \href{mailto:ciprian.tomoiaga@gmail.com}{\textsf{ciprian.tomoiaga@gmail.com}}
     | \textsf{+41 (0) 77 977 15 15}
-    \vspace*{-2ex}
   \end{center}
 
 \begin{minipage}[t]{0.48\textwidth}
@@ -78,18 +77,19 @@
   \section*{Personal}
   % \tracingtabu=4
   \tabulinesep=0pt
+  \vspace{-0.25em} % force align of fuckin' tabu
   \begin{tabu} to 1.1\linewidth {@{}p{5cm} @{}X[-1,c] @{}>{\hspace{5pt}}X[l]}
   \textbf{Interests:}  Computer vision &--& ConvNN, OpenCV\\
     Text mining \& Data analysis       &--& TensorFlow, Spark\\
     Data visualisation                 &--& JavaScript, WebGL
-  \end{tabu}
-  \vspace{0.35em}
+  \end{tabu} \par
+  \vspace{0.45em} % and again
   \textbf{Work permit:} B type\par
   \textbf{Languages:} English -- fluent \textbf{\&} French -- B2\par
   \textbf{Availability:} March 2018
 \end{minipage}
 
-\vspace{0.35em}
+\vspace{1em}
 \section*{Relevant work experience}
   % \begin {tabu} to <desired_width> {X[width, align, type]}
   \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
@@ -161,7 +161,6 @@
     2013 & \textbf{University of Manchester GameJam Hackathon} -- ``Most original game idea'' \\
     % 2012 & \textbf{IELTS} -- Scored 8/9 at the IELTS Academic Exam\\
     2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing
-               % & Demonstrated self education and research skills as well as good time management, as these achievements were gained mostly through self study in my own spare time.\\
   \end{tabu}
 
 % \vspace{1em}
