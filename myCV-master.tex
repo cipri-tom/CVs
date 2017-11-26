@@ -62,39 +62,31 @@
     | \textsf{+41 (0) 77 977 15 15}
   \end{center}
 
-\begin{minipage}[t]{0.48\textwidth}
 \section*{Education}
-  \textbf{EPF Lausanne} \hfill 2016-2018\par
-  MSc Computer Science -- 5.2 avg.\par
-  Data analysis, Machine learning \par
-  \vspace{0.35em}
-  \textbf{University of Manchester} \hfill 2012-2016\par
-  BSc Computer Science -- 81\% avg. \par
-  Computer Vision \& AI
-\end{minipage}
-\quad
-\begin{minipage}[t]{0.49\textwidth}
-  \section*{Personal}
-  % \tracingtabu=4
-  \tabulinesep=0pt
-  \vspace{-0.25em} % force align of fuckin' tabu
-  \begin{tabu} to 1.1\linewidth {@{}p{5cm} @{}X[-1,c] @{}>{\hspace{5pt}}X[l]}
-  \textbf{Interests:}  Computer vision &--& ConvNN, OpenCV\\
-    Text mining \& Data analysis       &--& TensorFlow, Spark\\
-    Data visualisation                 &--& JavaScript, WebGL
-  \end{tabu} \par
-  \vspace{0.45em} % and again
-  \textbf{Work permit:} B type\par
-  \textbf{Languages:} English -- fluent \textbf{\&} French -- B2\par
-  \textbf{Availability:} March 2018
-\end{minipage}
+  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
+    \savetabu{timeline}
+    2016-2018
+      & \textbf{Ecole Polytechnique Fédérale de Lausanne} -- MSc Computer Science \\
+      & -- 5.2 GPA (86\%) -- focused on data analysis and inter-disciplinarity with humanities \\
+      & -- best project in Digital Humanities class, and finalist for Faculty award:
+
+      \hspace{0.5em} \textit{Perception de la décolonisation et des nouvelles independances durant la Guerre froide} \\
+      & -- maximum grade in semester project, contributed to PhD research \footnote{Buntinx, V. et al. -- https://www.frontiersin.org/articles/10.3389/fdigh.2017.00002/full}: \textit{Studying linguistic changes in Google books corpora}
+  \end{tabu}
+
+  \begin{tabu}{\usetabu{timeline}}
+    2012-2016
+      & \textbf{University of Manchester} -- BSc Computer Science \\
+      & 81\% avg. \\
+      & Computer Vision \& AI \\
+  \end{tabu}
 
 \vspace{1em}
 \section*{Relevant work experience}
   % \begin {tabu} to <desired_width> {X[width, align, type]}
   \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
     \savetabu{timeline}
-  2017--present & \textbf{AXA Tech Lab} -- Master project\\
+  2017 & \textbf{AXA Tech Lab} -- Master project\\
     & -- Deep learning for information extraction and handwriting recognition
   \end{tabu}
 
