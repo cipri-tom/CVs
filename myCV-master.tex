@@ -41,10 +41,10 @@
   {#1}                                             % code before the text; #1 is the text
   [{\titlerule[1pt]}]                              % code after the text
 % \titlespacing*{\command}{left}{before}{after}[right]
-\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\titlespacing*{\section}{0pt}{1.5em}{0.3em}
 
 
-\setlength{\parskip}{0.5em}  % less space after paragraph
+\setlength{\parskip}{0.5em}  % more space after paragraph
 \setlength{\parindent}{0pt}  % avoid auto indentation
 \pagestyle{empty}            % Produces empty heads and feet - no page numbers
 
@@ -56,103 +56,144 @@
   \noindent
   \begin{center} %heading: Title, Address and contact
     {\LARGE Ciprian I.~Tomoiagă}
-    \vspace*{-0.5em}
 
     \href{mailto:ciprian.tomoiaga@gmail.com}{\textsf{ciprian.tomoiaga@gmail.com}}
     | \textsf{+41 (0) 77 977 15 15}
   \end{center}
 
+\tabulinesep=1.1mm
 \section*{Education}
-  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
+  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2cm}|[3pt accent_color] X[j, p]}
+    % \extrarowsep
     \savetabu{timeline}
     2016-2018
       & \textbf{Ecole Polytechnique Fédérale de Lausanne} -- MSc Computer Science \\
       & -- 5.2 GPA (86\%) -- focused on data analysis and inter-disciplinarity with humanities \\
-      & -- best project in Digital Humanities class, and finalist for Faculty award:
+      & -- Best project in Digital Humanities class, and finalist for Faculty award:
 
       \hspace{0.5em} \textit{Perception de la décolonisation et des nouvelles independances durant la Guerre froide} \\
-      & -- maximum grade in semester project, contributed to PhD research \footnote{Buntinx, V. et al. -- https://www.frontiersin.org/articles/10.3389/fdigh.2017.00002/full}: \textit{Studying linguistic changes in Google books corpora}
+
+      & -- maximum grade in semester project, contributed to PhD research \footnote{Buntinx, V. et al. -- \url{https://www.frontiersin.org/articles/10.3389/fdigh.2017.00002/full}}:
+
+      \hspace{0.5em} \textit{Studying linguistic changes in Google books corpora}\\
+
+      & -- selected for the poster session of the \textit{Applied Machine Learning Days 2017} conference
+
+      \hspace{0.5em} Our research improved Amazon review system by uncovering useful but unseen reviews using natural language processing techniques and machine learning
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
     2012-2016
       & \textbf{University of Manchester} -- BSc Computer Science \\
-      & 81\% avg. \\
-      & Computer Vision \& AI \\
+      & -- 81\% GPA -- top 5\% in class -- focused on Computer Vision and Artificial Intelligence \\
+      & -- earned \textit{Head of School Award} for outstanding contributions to the CS department\\
+      & -- designed an autonomous drone capable of navigating and mapping building interiors \\
+      & -- implemented the above proof of concept on low-cost device, thus empowering people with advanced remote mapping tools \footnote{Summary presentation here: \url{https://www.youtube.com/watch?v=NP1hGg2V7uM}}\\
+      & -- implemented medical application to speed-up detection of sickle-cell anaemia using image processing techniques
   \end{tabu}
 
-\vspace{1em}
+  \begin{tabu}{\usetabu{timeline}}
+    2008-2012
+      & \textbf{"Liviu Rebreanu" National College, Bistrița} -- Informatics \\
+      & -- 94\% GPA -- 1\textsuperscript{st} of class \\
+      & -- Top 3 at various inter-county contests in Physics, Mathematics and Computing
+  \end{tabu}
+
+
 \section*{Relevant work experience}
   % \begin {tabu} to <desired_width> {X[width, align, type]}
-  \begin{tabu} to \textwidth {>{\RaggedLeft\bfseries}m{2.65cm}|[3pt accent_color] X[j, p]}
-    \savetabu{timeline}
-  2017 & \textbf{AXA Tech Lab} -- Master project\\
-    & -- Deep learning for information extraction and handwriting recognition
+  \begin{tabu}{\usetabu{timeline}}
+  Present
+    & \textbf{AXA Tech Lab} -- Sponsored Masters project\\
+    & -- research in computer vision for handwriting recognition \\
+    & -- allows digitisation of difficult documents, with application to archiving old manuscripts
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
-  2016--2017 & \textbf{Amazon opinion mining} -- Analysed Swiss products from 90\,GB of reviews\\
-    & -- Used \textit{Spark} and ML to uncover useful reviews\\
-    & -- Presented results in Applied ML Days conference 2017\\
-    [-1.75ex]\\ % new paragraph
-  & \textbf{Twitter sentiment analysis} -- Convolutional Neural Network with 86.5\%  accuracy  \\
-    [-1.75ex]\\ % new paragraph
-  & \textbf{Unsupervised \& Reinforcement learning}\\
-    & -- Unsupervised handwriting classifier with self-organising neuronal maps\\
-    & -- \textit{SARSA($\lambda$)} agent which learns to solve the mountain car challenge\\
-    [-1.75ex]\\
-  & \textbf{Venice Time Machine} -- Interactive \textit{WebGL} display of 4D point clouds
-  \end{tabu}
-
-  \begin{tabu}{\usetabu{timeline}}
-  2015--2016 & \textbf{Autonomous indoor mapping with drones} -- final year project \\
-    & -- use computer vision \& AI to autonomously build 3D maps of unknown environments \\
-    & -- deploy on cheap commercial drone for proof of concept \\
-    [-1.75ex]\\ % new paragraph
-  & \textbf{Detection of sickle-cell anaemia} -- via image processing techniques
+  2016--2017
+    & \textbf{Venice Time Machine}\footnote{International project covering 1000 years of Venetian history (\url{https://vtm.epfl.ch/}). It also aims to expand to major cities of Europe via the FET flagship initiative (\url{https://ec.europa.eu/futurium/en/content/venice-time-machine-flagship})} -- 4D multiscale geohistoric viewer \\
+    & -- built high-performance web interface for the interactive display of 4D point clouds\\
+    & -- this was used as contest demo for the prestigious European FET flagship
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
   2014--2015 & \textbf{CERN Technical student} -- Methodical Accelerator Design\\
-    & -- developed new \textit{Generalised Truncated Power Series Algebra} for optimising and \newline \hspace*{0.5em} extending the transport maps used by particle accelerator simulation codes\\
+    & -- developed new \textit{Generalised Truncated Power Series Algebra} for optimising and extending the transport maps used by particle accelerator simulation codes\\
     % & -- derived a complete set of new formula and data structure to address the problem of memory consumption required for efficient computation of high order \textit{TPSA}\\
     & -- implemented as a library which outperforms ($\times$6) existing high-performance ones\\
-    % & -- our advances have been published in a paper for \textit{IPAC'15} conference\\
+    & -- co-authored paper for \textit{IPAC'15} conference\\
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
-  Summer 2013 & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
-      & -- devised visualisation of brain data in a neuroscience research project\\
-      & -- solved the challenge of implementing them for the web, using \textit{WebGL} and \textit{JavaScript}
-      % & -- learned basic computer graphics programming with the OpenGL-ES API\\
+  Summer & \textbf{Codemart Summer Intern} -- The Virtual Brain\\
+  2013   & -- devised novel visualisation of brain data in a neuroscience research project\\
+         & -- solved the challenge of implementing them for the web, using \textit{WebGL} and \textit{JavaScript}
   \end{tabu}
 
-\section*{Other work experience}
+\section*{Extracurricular activities}
+  I am an all-round geek with an interest in communicating science to the large public. Occasionally, I take part in hackathons to learn new technologies and apply them in useful products.
+
   \begin{tabu}{\usetabu{timeline}}
-  2010--present & \textbf{Volunteering} -- all-round geek with an interest in communicating science\\
-    & -- Official STEM ambassador \& science busker at Manchester Science festival\\
-  \end{tabu}
+  2016-2017
+    & \textbf{Science communicator} in various sessions at the ArtLab DataSquare exhibitions
 
-  \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
-  2013--2014 & \textbf{Ultimate Programming Society} --VP-- organised hackathons and tech events\\
-    % & -- organised events for students who want to expand their knowledge; these included programming workshops, hackathons and talks on various topics\\
-    % & -- organised biggest programming workshop in the school (100\texttt{+} attendees)\\
-    % & -- facilitated students' contact with industry and created work opportunities\\
+    \hspace{0.5em} These included visits from the Federal ETH Board\\
+    & \textbf{Volunteer} in the EPFL Open Days to showcase Computer Science research\\
+    & \textbf{Promoter} of Romanian cultural events at my university
   \end{tabu}
 
   \begin{tabu}{\usetabu{timeline}}
-  Summer 2011 & \textbf{Balkan Olympiad in Informatics} -- chief of Media department\\
-    & -- coordinated team of 5 journalists and team of 20 guides
+  2015-2016
+    & \textbf{Manchester Science festival} -- Volunteer science busker\\
+    & -- engaged with large public of all ages in demonstrations of science\\
+    & \textbf{PASS Leader} -- mentored younger students in Peer Assisted Study Sessions\\
+    & \textbf{CS Student Committee} -- student representative at faculty and university level, building and maintaining relationships between students and staff
   \end{tabu}
+
+  \begin{tabu}{\usetabu{timeline}}
+  2014--2015
+    & \textbf{Official CERN guide} -- volunteered to guide tourists around CERN, explaining the purpose of the facilities to laypersons and pupils\\
+    & \textbf{TEDxCERN} -- volunteer
+  \end{tabu}
+
+  \begin{tabu} {\usetabu{timeline}} % use a previously saved tabu
+  2013--2014
+    & \textbf{Manchester Romanian Society} -- Vice-President\\
+    & -- organised cultural events to promote Romanian culture and to bring students together\\
+    & -- initiated partnership with other Romanian societies in the UK via ARISS-UK\footnote{\textit{Association of Romanian International Student Societies}}\vspace{0.5em}\\
+
+    & \textbf{Ultimate Programming Society} -- Vice-President\\
+    & -- organised events for students who want to expand their knowledge; these included programming workshops, hackathons and talks on various topics\\
+    & -- organised biggest programming workshop in the school (100\texttt{+} attendees)\\
+    & -- facilitated students' contact with industry and created work opportunities\vspace{0.5em}\\
+
+    & \textbf{MOSI Official STEM ambassador}\footnote{Museum of Science and Industry, Manchester (\url{https://www.msimanchester.org.uk/learning/stem-ambassadors})} \\
+    & -- organised science and programming workshops with pupils in Mancunian high-schools\\
+  \end{tabu}
+
+  % \begin{tabu}{\usetabu{timeline}}
+  % Summer & \textbf{Balkan Olympiad in Informatics} -- chief of Media department\\
+  % 2011   & -- coordinated team of 5 journalists and team of 20 guides
+  % \end{tabu}
 
 \section*{Achievements and Awards}
-  \begin {tabu} {\usetabu{timeline}} % use a previously saved tabu
+  \begin{tabu} {\usetabu{timeline}}
+    2017 & \textbf{SHS Prize} -- nominated by professors among the finalists; results not yet revealed\\
+         & \textbf{LauzHack} -- ARomance app -- among the top 8 finalists, out of 72 submissions\\
     2016 & \textbf{Computer Science Head of School Award}\\
     2015 & \textbf{International Particle Accelerator Conference '15}\\
          & -- co-authored paper and poster on \textit{Generalised Truncated Power Series Algebra} \\
     2013 & \textbf{University of Manchester GameJam Hackathon} -- ``Most original game idea'' \\
     % 2012 & \textbf{IELTS} -- Scored 8/9 at the IELTS Academic Exam\\
     2009--2012 & \textbf{Top 3} -- various inter-county contests in Physics, Mathematics and Computing
+  \end{tabu}
+
+
+\section*{Languages}
+  \begin{tabu} {\usetabu{timeline}}
+    English  & Full professional proficiency -- IELTS \textbf{C2} certificate\\
+    French   & Minimum professional proficiency \\
+    Romanian & Mother tongue, native proficiency
   \end{tabu}
 
 % \vspace{1em}
